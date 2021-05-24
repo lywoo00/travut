@@ -74,17 +74,17 @@ width: 66px;height: 3px; background-color: #12D294;}
 #download .content-box {text-align: center;}
 #download .content-box h3 {font-size: 5rem; line-height: 6.4rem; color: #626262;}
 #download .content-box h2 {font-size: 5rem; font-weight: bold; line-height: 6.4rem; color: #12D294; margin-bottom: 5rem;}
-#download .content-box .link-box {}
-#download .content-box .link-box p {font-size: 1.8rem; font-weight: bold; margin-top: 3.2rem}
-#download .content-box .link-box p:first-child {margin-top: 0;}
-#download .content-box .link-box .btn-wrap {display: flex; justify-content: center; margin-top: 1.2rem;} 
-#download .content-box .link-box .btn-wrap a {display: flex; align-items: center; width: 14.5rem; height: 5.4rem; background-color: #12D294; color: #000; text-align: left; border-radius: 5.4rem; }
-#download .content-box .link-box .btn-wrap a.align-right {justify-content: flex-end; padding-right: 0.2rem;}
-#download .content-box .link-box .btn-wrap a.align-left {justify-content: flex-start; padding-left: 0.2rem;}
-#download .content-box .link-box .btn-wrap a > div {display: flex; justify-content: center; align-items: center; width: 13.3rem; height: 5rem; background: #fff ; border-radius: 5rem;}
-#download .content-box .link-box .btn-wrap a > div {}
-#download .content-box .link-box .btn-wrap a:first-child {margin-right: 3.2rem;} 
-#download .content-box .link-box .btn-wrap a span {font-size: 1.5rem; font-weight: bold;}
+#download .content-box p {font-size: 1.8rem; font-weight: bold; margin-top: 3.2rem; margin-bottom: 1rem;}
+#download .content-box p:first-child {margin-top: 0;}
+#download .content-box .btn-wrap {display: flex; justify-content: center;}
+/* #download .content-box .btn-wrap > div {background: #000; margin-right: 10px;} */
+
+#download .content-box .btn-wrap a {display: flex; align-items: center; width: 14.5rem; height: 5.4rem; background-color: #12D294; color: #000; text-align: left; border-radius: 5.4rem;}
+#download .content-box .btn-wrap a:first-child {margin-right: 2rem;}
+#download .content-box .btn-wrap a div {display: flex; justify-content: center; align-items: center; width: 13.3rem; height: 5rem; background: #fff ; border-radius: 5rem;}
+#download .content-box .btn-wrap a.align-right {justify-content: flex-end; padding-right: 0.2rem;}
+#download .content-box .btn-wrap a.align-left {justify-content: flex-start; padding-left: 0.2rem;}
+#download .content-box .btn-wrap a div span {}
 
 @media screen and (max-width: 768px) {
     html {font-size: 6.66px;}
@@ -93,6 +93,9 @@ width: 66px;height: 3px; background-color: #12D294;}
     #download .content-box h3 {font-size: 4rem;}
     #download .content-box h2 {font-size: 4rem;}
     #download .content-box .link-box > div {display: flex; justify-content: center; flex-wrap: wrap;}
+    #download .content-box .btn-wrap {flex-wrap: wrap;}
+    #download .content-box .btn-wrap > div {display: flex; justify-content: center; width: 100%; margin-bottom: 2rem;}
+
 
 }
 
