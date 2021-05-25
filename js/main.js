@@ -39,6 +39,8 @@ $(function(){
         }
     })
     
+    new WOW().init();
+    
 })
 
 // const leftCont = document.querySelector('.content_left');

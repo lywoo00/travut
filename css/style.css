@@ -1,11 +1,17 @@
-/* COMMON */
+/* ---------- COMMON ---------- */
 html {font-size: 10px;}
 body {font-size: 100%; background-color: rgba(18, 210, 148, .3); font-family: 'Roboto', sans-serif; }
 img {width: 100%; vertical-align: top;}
 a {text-decoration: none;}
-.container {position: relative; width: 1170px; padding: 0 15px; margin: 0 auto;}
+.container {position: relative; width: 1170px; padding: 0 15px; margin: 0 auto; box-sizing: border-box;}
+.cont-tit {font-size: 1.8rem; font-weight: bold; text-align: center;}
+.cont-tit span {position: relative;}
+.cont-tit span::after {content: ""; position: absolute; left: 0; bottom: -3px; height: 2px; width: 100%; background-color: #12D294;}
+.cont-sub-tit {font-size: 1.5rem; text-align: center; margin: 1.6rem 0 1rem; }
+.cont-desc {font-size: 1.2rem; text-align: center; color: #999;}
+.ml10 {margin-left: 17%;}
 
-/* MAIn */
+/* ---------- MAIn ---------- */
 .main {position: relative; height: 100vh; background-image: url(../images/main_line.png); background-repeat: no-repeat;background-size: 100%;background-position: 0 75%;
 }
 .main .container {height: 100vh;}
@@ -67,10 +73,10 @@ width: 66px;height: 3px; background-color: #12D294;}
 
 
 @media screen and (max-width: 1200px) {
-    .container {width: 100%; }
+    .container {width: 100%; padding: 0 30px; }
 }
 
-/* DOWNLOAD */
+/* ---------- DOWNLOAD ---------- */
 #download {}
 #download .container {display: flex; height: 100vh; justify-content: center; align-items: center;}
 #download .content-box {text-align: center;}
@@ -88,16 +94,127 @@ width: 66px;height: 3px; background-color: #12D294;}
 #download .content-box .btn-wrap a.align-left {justify-content: flex-start; padding-left: 0.2rem;}
 #download .content-box .btn-wrap a div span {}
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     html {font-size: 6.66px;}
-}
+} */
 @media screen and (max-width: 480px) {
     #download .content-box h3 {font-size: 4rem;}
     #download .content-box h2 {font-size: 4rem;}
     #download .content-box .link-box > div {display: flex; justify-content: center; flex-wrap: wrap;}
     #download .content-box .btn-wrap {flex-wrap: wrap;}
     #download .content-box .btn-wrap > div {display: flex; justify-content: center; width: 100%; margin-bottom: 2rem;}
-
-
 }
 
+/* ---------- TRAVELER ---------- */
+.visual {position: relative; height: 745px; overflow: hidden; }
+.visual .container {height: 100%;}
+.visual .visual-image {position: absolute; max-width: 600px; right: 0; top: 0; animation-duration: .4s; animation-delay: .6s; animation-timing-function: ease-in; }
+.visual .visual-image img {width: 100%;}
+.visual .visual-title {position: absolute; left: 10%; top: 35%; animation-timing-function: ease-in; animation-duration: .4s;}
+.visual .visual-title h2 {font-size: 3rem; font-weight: bold; line-height: 39px;}
+.visual .visual-title h3 {font-size: 2.7rem; font-weight: 400; line-height: 35px;}
+.visual .visual-link {position: absolute; left: 10%; top: 50%; animation-delay: .4s; animation-timing-function: ease-in; animation-duration: .3s;}
+.visual .visual-link em {font-size: 1.8rem; font-weight: bold;}
+.visual .visual-link p {margin-top: 1rem;}
+.visual .visual-link p a {display: inline-block; width: 18.2rem; height: 4.2rem; border: 1px solid #ccc; border-radius: 3rem; font-size: 1.5rem; color: #000; line-height: 4.2rem; text-align: center; margin-right: 3rem; background-color: #fff; transition: .4s;}
+.visual .visual-link p a:hover {background-color:#12D294; color: #fff; border-color: transparent;}
+ 
+.whatWeOffer {padding-top: 70px;}
+.whatWeOffer .offer_content {margin-top: 3rem;}
+.whatWeOffer .offer_content .row {display: flex; margin-bottom: 4rem;}
+.whatWeOffer .offer_content .row:last-child {margin-bottom: 0;}
+.whatWeOffer .offer_content .row .content-item {flex-basis: 25%; max-width: 25%; padding: 0 58px; cursor: pointer;}
+.whatWeOffer .offer_content .row .content-item:first-child {padding-left: 0;}
+.whatWeOffer .offer_content .row .content-item:last-child {padding-right: 0;}
+.whatWeOffer .offer_content .row .content-item > div {position: relative; overflow: hidden; background: #D5FFF177; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 180px; height: 180px; border-radius: 50%; box-sizing: border-box; text-align: center;}
+.whatWeOffer .offer_content .row .content-item > div:hover .bg {opacity: 1;}
+.whatWeOffer .offer_content .row .content-item .bg {position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #12D294; color: #fff; font-size: 1.6rem; opacity: 0; transition: all .4s;}
+.whatWeOffer .offer_content .row .content-item img {width: 6.6rem; margin-bottom: 2rem;}
+.whatWeOffer .offer_content .row .content-item p {font-size: 1.2rem; color: #12D294;}
+
+.weCanDo {padding: 70px 0 70px; position: relative;}
+.weCanDo .weCanDo-image {position: absolute; left: 0; bottom: 0;}
+.weCanDo .weCanDo-image {width: 65%;}
+.weCanDo .weCanDo-content {display: flex; justify-content: flex-end;  margin-top: 4.3rem}
+.weCanDo .weCanDo-content .weCanDo-list {position: relative; max-width: 600px; height: 550px; background: #fff; padding: 86px 110px; box-sizing: border-box; box-shadow: 30px 30px 99px #00000029;}
+.weCanDo .weCanDo-content .weCanDo-list::before {content: ""; position: absolute; left: 10%; top: 10%; width: 28px; height: 19px; background: url(../images/comma_ico_01.png) no-repeat center; background-size: cover; }
+.weCanDo .weCanDo-content .weCanDo-list::after {content: ""; position: absolute; right: 10%; bottom: 10%; width: 28px; height: 19px; background: url(../images/comma_ico_02.png) no-repeat center; background-size: cover; }
+.weCanDo .weCanDo-content .weCanDo-list li {margin-bottom: 96px;}
+.weCanDo .weCanDo-content .weCanDo-list li:last-child {margin-bottom: 0;}
+.weCanDo .weCanDo-content .weCanDo-list li em {font-size: 1.5rem; font-weight: bold; display: block; margin-bottom: 1rem;}
+.weCanDo .weCanDo-content .weCanDo-list li p {font-size: 1.2rem; color: #999;}
+
+@media screen and (max-width: 1200px) {
+    .whatWeOffer .offer_content .row {flex-wrap: wrap; justify-content: space-evenly; margin: 0; padding: 0 130px;}
+    .whatWeOffer .offer_content .row .content-item {display: flex; justify-content: center; flex-basis: 50%; max-width: 50%; padding: 0; margin-bottom: 20px;}
+    .weCanDo .weCanDo-content {justify-content: center;}
+
+}
+@media screen and (max-width: 768px) {
+    .visual .visual-image {width: 100%;}  
+    .visual .visual-link em {font-size: 1.6rem;}
+    .whatWeOffer .offer_content .row {padding: 0;}
+}
+@media screen and (max-width: 480px) {
+    .cont-tit {font-size: 2.4rem; font-weight: bold; text-align: center;}
+    .cont-sub-tit {font-size: 1.4rem; text-align: center; margin: 1.6rem 0 1rem; }
+    .cont-desc {font-size: 1.2rem; text-align: center; color: #999;}
+
+    .visual {height: 100vh;}
+    .visual .visual-title {top: 10%;}
+    .visual .visual-title h2 {font-size: 2rem;}
+    .visual .visual-title h3 {font-size: 1.6rem;}
+    .visual .visual-link {top: 65%; left: 0; right: 0; text-align: center;}
+
+    .visual .visual-link em {display: block; width: 100%; text-align: center;}
+    .visual .visual-link p {padding: 0 30px;}
+    .visual .visual-link p a {margin: 0; width: 100%; margin-bottom: 10px;}
+
+    .whatWeOffer {padding-top: 0;}
+    .whatWeOffer .offer_content .row .content-item > div {width: 120px; height: 120px;}
+    .whatWeOffer .offer_content .row .content-item img {width: 40px; margin-bottom: 2rem;}
+    .whatWeOffer .offer_content .row .content-item p {font-size: 6px;}
+
+    .weCanDo .weCanDo-content .weCanDo-list { background: #fff; padding: 60px 43px; height: 450px;}
+    .weCanDo .weCanDo-content .weCanDo-list::before {width: 17px; height: 14px; left: 5%; top: 7%;}
+    .weCanDo .weCanDo-content .weCanDo-list::after {width: 17px; height: 14px; right: 5%; bottom: 7%;}
+    .weCanDo .weCanDo-content .weCanDo-list li {margin-bottom: 50px; text-align: center;}
+    .weCanDo .weCanDo-content .weCanDo-list li:last-child {margin-bottom: 0;}
+    .weCanDo .weCanDo-content .weCanDo-list li em {font-size: 1.5rem; font-weight: bold; display: block; margin-bottom: 1rem;}
+    .weCanDo .weCanDo-content .weCanDo-list li p {font-size: 1.2rem; color: #999;}
+}
+/* ---------- VUTLER ---------- */
+
+#vutler-visual.visual .visual-image {max-width: 435px;}
+
+.advantages {padding-top: 70px;}
+.advantages .advantages_content {display: flex; flex-wrap: wrap;}
+.advantages .advantages_content .text_right,
+.advantages .advantages_content .text_left{width: 50%; text-align: center;} 
+.advantages .advantages_content .text_right {}
+.advantages .advantages_content .text_left { }
+.advantages .advantages_content .title {display: inline-block; font-size: 24px; margin: 20px 0 20px;}
+.advantages .advantages_content .desc {font-size: 16px; padding: 0 30px; color: #555;}
+.advantages .advantages_content .img-box {width: 180px; margin: 0 auto; }
+.advantages .advantages_content img {width: 100%;}
+
+.whoCanDoIt {padding-top: 70px;}
+
+.howToUse {padding: 70px 0;}
+.howToUse .howToUse-content {display: flex; flex-wrap: wrap; justify-items: flex-end; margin-top: 24px;}
+.howToUse .howToUse-content li {width: 100%; display: flex; justify-content: flex-end; margin-bottom: 30px;}
+.howToUse .howToUse-content li > div {display: flex; align-items: center;  width: 50%;}
+.howToUse .howToUse-content li em {display: block; width: 50px; height: 50px; border-radius: 50%; border: 1px solid #12D294; text-align: center; font-size: 30px; line-height: 50px; font-weight: bold;}
+.howToUse .howToUse-content li span {position: relative; display: block; width: 50px; height: 1px; background-color: #12D294; margin: 0 10px 0 5px;}
+.howToUse .howToUse-content li span::after {content: ""; display: block; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #12D294;}
+.howToUse .howToUse-content li p {}
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+#vutler-visual.visual .visual-image {max-width: 90%;}
+
+}
