@@ -17,17 +17,17 @@ a {text-decoration: none;}
 .cont-tit {font-size: 3rem; font-weight: bold; text-align: center;}
 .cont-tit span {position: relative;}
 .cont-tit span::after {content: ""; position: absolute; left: 0; bottom: -3px; height: 3px; width: 100%; background-color: #12D294;}
-.cont-sub-tit {font-size: 2.4rem; text-align: center; margin: 1.6rem 0 1rem; }
-.cont-desc {font-size: 1.6rem; text-align: center; color: #999;}
+.cont-sub-tit {font-size: 2.4rem; text-align: center; margin: 1.6rem 0 1rem; animation-delay: .2s;}
+.cont-desc {font-size: 1.6rem; text-align: center; font-weight: normal; animation-delay: .4s;}
 .ml10 {margin-left: 17%;}
 
 /* ---------- MAIn ---------- */
 .main {position: relative; height: 100vh; background-image: url(../images/main_line.png); background-repeat: no-repeat;background-size: 100%;background-position: 0 75%;
 }
 .main .container {height: 100vh;}
-.main .content {position: absolute; bottom: 8%; left: 0; right: 0; padding-top: 17.5rem; display: flex; align-items: flex-end; justify-content: space-around;}
+.main .content {position: absolute; bottom: 8%; left: 0; right: 0; display: flex; align-items: flex-end; justify-content: space-around;}
 .content-imgbox.left,
-.content-imgbox.right {position: relative; cursor: pointer;}
+.content-imgbox.right {position: relative; cursor: pointer; transition: all .3s;}
 .content-imgbox.left .left-img-01 {width: 41.3rem; padding-top: 3.5rem;}
 .etc-img {position: absolute; display: none;}
 .content-imgbox.left .cloud_01 {width: 9.7rem; left: 47%; top: -5%; }
@@ -98,6 +98,14 @@ width: 66px;height: 3px; background-color: #12D294;}
     .content-pop .pop-text .more span {font-size: 1.6rem;}
     .content-pop .pop-text .more img {width: 4.4rem;}
 }
+@media screen and (max-width: 768px) {
+    .main .content {position: static; flex-wrap: wrap;}
+    .main .content .content-box {width: 100%;}
+    .content-imgbox.left,
+    .content-imgbox.right {display: flex;}
+    .content-imgbox.left .left-img-01 {width: 30%;}
+    .content-imgbox.right .right-img-01 {width: 30%;}
+}
 @media screen and (max-width: 480px) {
     .container {width: 100%; padding: 0 15px; }
 }
@@ -111,14 +119,16 @@ width: 66px;height: 3px; background-color: #12D294;}
 #download .content-box p {font-size: 1.8rem; font-weight: bold; margin-top: 3.2rem; margin-bottom: 1rem;}
 #download .content-box p:first-child {margin-top: 0;}
 #download .content-box .btn-wrap {display: flex; justify-content: center;}
-/* #download .content-box .btn-wrap > div {background: #000; margin-right: 10px;} */
 
 #download .content-box .btn-wrap a {display: flex; align-items: center; width: 14.5rem; height: 5.4rem; background-color: #12D294; color: #000; text-align: left; border-radius: 5.4rem;}
 #download .content-box .btn-wrap a:first-child {margin-right: 2rem;}
 #download .content-box .btn-wrap a div {display: flex; justify-content: center; align-items: center; width: 13.3rem; height: 5rem; background: #fff ; border-radius: 5rem;}
 #download .content-box .btn-wrap a.align-right {justify-content: flex-end; padding-right: 0.2rem;}
 #download .content-box .btn-wrap a.align-left {justify-content: flex-start; padding-left: 0.2rem;}
-#download .content-box .btn-wrap a div span {}
+#download .content-box .btn-wrap a div span {display: flex; align-items: center;}
+#download .content-box .btn-wrap a div i {display: block; margin-right: 10px;}
+#download .content-box .btn-wrap a div i.google-play {width: 24px; height: 26px; background: url(../images/google_play.png) no-repeat left top; background-size: cover;}
+#download .content-box .btn-wrap a div i.app-store {width: 24px; height: 29px; background: url(../images/App_store_ico.png) no-repeat left top; background-size: cover;}
 
 /* @media screen and (max-width: 768px) {
     html {font-size: 6.66px;}
@@ -181,26 +191,26 @@ width: 66px;height: 3px; background-color: #12D294;}
 
 }
 @media screen and (max-width: 768px) {
-    .visual .visual-image {width: 100%;}  
+    .visual .visual-image {width: 90%;}  
     .visual .visual-link em {font-size: 1.6rem;}
     .whatWeOffer .offer_content .row {padding: 0;}
 }
 @media screen and (max-width: 480px) {
     .cont-tit {font-size: 2.4rem; font-weight: bold; text-align: center;}
     .cont-sub-tit {font-size: 1.4rem; text-align: center; margin: 1.6rem 0 1rem; }
-    .cont-desc {font-size: 1.2rem; text-align: center; color: #999;}
+    .cont-desc {font-size: 1.2rem; text-align: center;}
 
     .visual {height: 100vh;}
     .visual .visual-title {top: 10%;}
-    .visual .visual-title h2 {font-size: 2rem;}
-    .visual .visual-title h3 {font-size: 1.6rem;}
-    .visual .visual-link {top: 75%; left: 0; right: 0; text-align: center; transition: all .4s;}
+    .visual .visual-title h2 {font-size: 2.5rem; font-family: "SharpGroteskSmBold";}
+    .visual .visual-title h3 {font-size: 2.0rem;}
+    .visual .visual-link {top: 80%; left: 0; right: 0; text-align: center; transition: all .4s;}
 
     .visual .visual-link em {display: block; width: 100%; text-align: center;}
     .visual .visual-link p {padding: 0 30px;}
     .visual .visual-link p a {margin: 0; width: 100%; margin-bottom: 10px;}
 
-    .whatWeOffer {padding-top: 0;}
+    .whatWeOffer {padding-top: 30px;}
     .whatWeOffer .offer_content .row .content-item > div {width: 120px; height: 120px;}
     .whatWeOffer .offer_content .row .content-item img {width: 40px; margin-bottom: 2rem;}
     .whatWeOffer .offer_content .row .content-item p {font-size: 6px;}
@@ -217,38 +227,33 @@ width: 66px;height: 3px; background-color: #12D294;}
 
 #vutler-visual.visual .visual-image {max-width: 435px;}
 
-.advantages {padding-top: 70px;}
-.advantages .advantages_content {display: flex; flex-wrap: wrap;}
-.advantages .advantages_content .text_right,
-.advantages .advantages_content .text_left{width: 50%; text-align: center;} 
-.advantages .advantages_content .text_right {}
-.advantages .advantages_content .text_left { }
-.advantages .advantages_content .title {display: inline-block; font-size: 24px; margin: 20px 0 20px;}
-.advantages .advantages_content .desc {font-size: 16px; padding: 0 30px; color: #555;}
-.advantages .advantages_content .img-box {width: 180px; margin: 0 auto; }
-.advantages .advantages_content img {width: 100%;}
+.advantages {margin-top: -250px;}
+.advantages_content .content-box {display: flex; }
+.advantages_content .content-box.content_top {justify-content: flex-end; margin-bottom: 30px; animation-delay: .8s;}
+.advantages_content .content-box.content_bottom {animation-delay: 1s;}
+.advantages_content .content-box > div { padding: 30px; box-sizing: border-box; display: flex; align-items: center; background: #fff; border-radius: 15px; box-shadow: 0px 3px 6px #00000029;}
+.advantages_content .content-box > div .img-box {width: 90px;}
+.advantages_content .content-box.content_top > div .img-box {margin: 0 0 0 14px;}
+.advantages_content .content-box.content_bottom > div .img-box {margin: 0 14px 0 0;}
+.advantages_content .content-box > div .img-box img {width: 100%;}
+.advantages_content .content-box > div .text-box strong { display: block; margin-bottom: 10px; font-size: 20px; font-family: "SharpGroteskSmBold";}
+.advantages_content .content-box > div .text-box p {font-size: 16px; width: 270px; color: #555; word-break: break-word;}
+.advantages_content .content-box.content_bottom > div .text-box {text-align: right;}
 
 .whoCanDoIt {padding-top: 100px;}
 
-.howToUse {padding: 100px 0 30px;}
+.howToUse {padding: 100px 0 50px;}
 .howToUse .howToUse-content {display: flex; flex-wrap: wrap; justify-items: flex-end; margin-top: 24px;}
-.howToUse .howToUse-content li {width: 100%; display: flex; justify-content: flex-end; margin-bottom: 30px;}
+.howToUse .howToUse-content li {width: 100%; display: flex; justify-content: flex-end; margin-bottom: 118px;}
 .howToUse .howToUse-content li > div {display: flex; align-items: center;  width: 50%; transform: translateX(-26px);}
 .howToUse .howToUse-content li em {position: relative; display: block; width: 50px; height: 50px; border-radius: 50%; border: 1px solid #12D294; text-align: center; font-size: 30px; line-height: 50px; font-weight: bold; border: 2px solid #12D294; box-sizing: border-box;}
-.howToUse .howToUse-content li span {position: relative; display: block; width: 50px; height: 1px; background-color: #12D294; margin: 0 10px 0 5px;}
-.howToUse .howToUse-content li span::after {content: ""; display: block; position: absolute; top: 50%; transform: translateY(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #12D294;}
-.howToUse .howToUse-content li div p {font-size: 1.4rem; order: 1;}
+.howToUse .howToUse-content li em::after {content: ""; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); width: 2px; height: 120px; background: #12D294; }
+.howToUse .howToUse-content li div p {font-size: 1.4rem; font-weight: bold; transform: translateY(77px);}
 .howToUse .howToUse-content li:nth-child(2) {justify-content: flex-start;}
 .howToUse .howToUse-content li:nth-child(2) div {justify-content: flex-end; transform: translateX(25px);}
 .howToUse .howToUse-content li:nth-child(2) div em {order: 3; background-color: #12D294; color: #fff;}
-.howToUse .howToUse-content li:nth-child(2) div span {order: 2; margin: 0 5px 0 10px;}
-.howToUse .howToUse-content li:nth-child(2) p {text-align: right;}
-.howToUse .howToUse-content li:nth-child(1) div span::after {right: 0;}
-.howToUse .howToUse-content li:nth-child(2) div span::after {right: 100%;}
-.howToUse .howToUse-content li:nth-child(3) div span::after {right: 0;}
 
-.howToUse .howToUse-content li em::after {content: ""; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); width: 1px; height: 32px; background: #12D294; display: none; }
-.howToUse .howToUse-content li:nth-child(3) em::after {display: none;}
+.howToUse .howToUse-content li:nth-child(2) p {text-align: right;}
 
 .wellcome { padding-bottom: 70px;}
 .wellcome p { display: flex; width: 100%; justify-content: center; align-items: center; font-size: 38px; font-weight: bold; color: #777; font-family: "SharpGroteskMedium";}
@@ -256,34 +261,45 @@ width: 66px;height: 3px; background-color: #12D294;}
 .wellcome i {display: inline-block; width: 38px; height: 41px; background: url(../images/welcome_ico.png) no-repeat left top; background-size: cover; margin-left: 20px;}
 
 
-
-
 @media screen and (max-width: 768px) {
     .howToUse .howToUse-content li > div {transform: translateX(-20px);}
     .howToUse .howToUse-content li:nth-child(2) div{transform: translateX(20px);}
     .howToUse .howToUse-content li em {width: 40px; height: 40px; line-height: 40px; font-size: 24px;}
     .howToUse .howToUse-content li div p {font-size: 1.2rem;}
+    .wellcome p {font-size: 24px;}
+    .wellcome span {font-size: 30px;}
+    .wellcome i { width: 26.6px; height: 28.7px; margin-left: 10px;}
 
 }
 
 @media screen and (max-width: 660px) {
-    .howToUse .howToUse-content li {justify-content: flex-start;}
-    .howToUse .howToUse-content li > div { width: 100%; transform: translateX(0);}
-    .howToUse .howToUse-content li div p {font-size: 1.6rem; }
-    .howToUse .howToUse-content li:nth-child(2) div {justify-content: flex-start;}
-    .howToUse .howToUse-content li:nth-child(2) div {transform: translateX(0)}
-    .howToUse .howToUse-content li:nth-child(2) div em {order: 1;}
-    .howToUse .howToUse-content li:nth-child(2) div span {order: 2; margin: 0 10px 0 5px;}
-    .howToUse .howToUse-content li:nth-child(2) div span::after { right: 0;}
-    .howToUse .howToUse-content li:nth-child(2) div p {order: 3; text-align: left;}
+    .advantages {margin-top: 0; padding-top: 70px;}
+    .advantages_content .content-box > div { width: 100%; box-shadow: none; padding: 0; }
+    .advantages_content .content-box > div .img-box {display: none;}
+    .advantages_content .content-box > div .text-box {width: 100%;}
+    .advantages_content .content-box > div .text-box strong {font-size: 17px; text-align: center;}
+    .advantages_content .content-box > div .text-box p {font-size: 13px; width: auto; text-align: center;}
 
-    .howToUse .howToUse-content li div span {display: none;}
-    .howToUse .howToUse-content li em::after {display: block;}
+    .howToUse .howToUse-content li > div {transform: translateX(-20px);}
+    .howToUse .howToUse-content li:nth-child(2) div{transform: translateX(20px);}
+    .howToUse .howToUse-content li em {width: 40px; height: 40px; line-height: 40px; font-size: 24px;}
+    .howToUse .howToUse-content li div p {font-size: 1.2rem; width: 125px;}
+    /* .howToUse .howToUse-content li {justify-content: flex-start;} */
+    /* .howToUse .howToUse-content li > div { width: 100%; transform: translateX(0);} */
+    /* .howToUse .howToUse-content li div p {font-size: 1.6rem; } */
+    /* .howToUse .howToUse-content li:nth-child(2) div {justify-content: flex-start;} */
+    /* .howToUse .howToUse-content li:nth-child(2) div {transform: translateX(0)} */
+    /* .howToUse .howToUse-content li:nth-child(2) div em {order: 1;} */
+    /* .howToUse .howToUse-content li:nth-child(2) div p {order: 3; text-align: left;} */
 }
 @media screen and (max-width: 480px) {
-    .whoCanDoIt {padding-top: 0;}
+    .advantages {padding-top: 30px;}
+
+    .howToUse .howToUse-content li {margin-bottom: 75px;}
+    .howToUse .howToUse-content li em::after {height: 77px; background: #12D294; }
+    /* .whoCanDoIt {padding-top: 0;}
     .howToUse .howToUse-content li div span {width: 30px;}
-    .howToUse .howToUse-content li div p {font-size: 1.3rem;}
+    .howToUse .howToUse-content li div p {font-size: 1.3rem;} */
     
 
 }
