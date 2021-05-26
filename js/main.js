@@ -1,7 +1,11 @@
 $(function(){
 
+    // $(window).resize( function() {
+    //     if($(window).width() > 768) { 
+    //         mainAnimation();
+    //     }
+    // } );
     mainAnimation ();
-    
     function mainAnimation (){
         $('.content_left').click(function(){
             $(this).toggleClass('active');

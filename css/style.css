@@ -33,14 +33,15 @@ a {text-decoration: none;}
 .content-imgbox.left .cloud_01 {width: 9.7rem; left: 47%; top: -5%; }
 .content-imgbox.left .cloud_02 {width: 8rem; left: 0; top: 23%;}
 .content-imgbox.left .airplane {width: 9rem; left: 20%; top: 0;}
-
+.content-imgbox.left .click-me {right: 10%;}
 
 .content-imgbox.right .right-img-01 {width: 34.2rem; padding-top: 3.5rem;}
 .content-imgbox.right .cloud_01 {width: 12.9rem; left:-40%; top: 30%; }
 .content-imgbox.right .cloud_02 {width: 8rem; right: 0; top: 20%; }
-.content-imgbox.right .click-me {left: 0; top: 130px;}
+.content-imgbox.right .click-me {left: -10%; top: 17%;}
 
-.click-me {position: absolute; right: 50px; font-size: 2rem; color: #fff; opacity: 0.5; transition-duration: .3s;}
+
+.click-me {position: absolute; font-size: 2rem; color: #fff; opacity: 0.5; transition-duration: .3s;}
 .arrow-box {opacity: 0; margin-top: 2rem; text-align: center; transition-duration: .3s;}
 .arrow-box span  {font-size: 3rem;font-weight: bold;color: #12D294;}
 .arrow-box img  {width: 6.6rem;}
@@ -106,23 +107,29 @@ width: 66px;height: 3px; background-color: #12D294;}
     .content-pop .pop-text .more img {width: 4.4rem;}
 }
 @media screen and (max-width: 768px) {
+    .click-me { font-size: 1.6rem;}
+    .content-imgbox.left .click-me {right: 25%;}
+    .content-imgbox.right .click-me { left: 25%; }
     .main {background-position: 0 50%;}
     .main .content {position: static; flex-wrap: wrap; align-items: center; width: 70%; margin: 0 auto; height: 100%;}
     .main .content .content-box {width: 100%;}
     .content-imgbox.left,
     .content-imgbox.right {display: block; text-align: center;}
-    .content-imgbox.left .left-img-01 {width: 55%;}
-    .content-imgbox.right .right-img-01 {width: 55%;}
+    .content-imgbox.left .left-img-01 {width: 42%;}
+    .content-imgbox.right .right-img-01 {width: 42%;}
     .arrow-box span  {font-size: 1.6rem;}
     .arrow-box img  {width: 2.6rem; vertical-align: baseline;}
 
     .content-pop {display: none;}
-    
-
-    
+}
+@media screen and (max-width: 660px) {
+    .content-imgbox.left .left-img-01 {width: 55%;}
+    .content-imgbox.right .right-img-01 {width: 55%;}   
 }
 @media screen and (max-width: 480px) {
     .container {width: 100%; padding: 0 15px; }
+    .content-imgbox.left .left-img-01 {width: 60%;}
+    .content-imgbox.right .right-img-01 {width: 60%;} 
 }
 
 /* ---------- DOWNLOAD ---------- */
@@ -187,7 +194,7 @@ width: 66px;height: 3px; background-color: #12D294;}
 .whatWeOffer .offer_content .row .content-item img {width: 6.6rem; margin-bottom: 2rem;}
 .whatWeOffer .offer_content .row .content-item p {font-size: 1.2rem; color: #12D294;}
 
-.weCanDo {padding: 100px 0 70px; position: relative;}
+.weCanDo {padding: 70px 0 70px; position: relative;}
 .weCanDo .weCanDo-image {position: absolute; left: 0; bottom: 0;}
 .weCanDo .weCanDo-image {width: 65%;}
 .weCanDo .weCanDo-content {display: flex; justify-content: flex-end;  margin-top: 4.3rem}
@@ -211,7 +218,7 @@ width: 66px;height: 3px; background-color: #12D294;}
     .whatWeOffer .offer_content .row {padding: 0;}
 }
 @media screen and (max-width: 480px) {
-    .cont-tit {font-size: 2.4rem; font-weight: bold; text-align: center;}
+    .cont-tit {font-size: 2.5rem; font-weight: bold; text-align: center;}
     .cont-sub-tit {font-size: 1.4rem; text-align: center; margin: 1.6rem 0 1rem; }
     .cont-desc {font-size: 1.2rem; text-align: center;}
 
@@ -255,9 +262,9 @@ width: 66px;height: 3px; background-color: #12D294;}
 .advantages_content .content-box > div .text-box p {font-size: 16px; width: 270px; color: #555; word-break: break-word;}
 .advantages_content .content-box.content_bottom > div .text-box {text-align: right;}
 
-.whoCanDoIt {padding-top: 100px;}
+.whoCanDoIt {padding-top: 70px;}
 
-.howToUse {padding: 100px 0 50px;}
+.howToUse {padding: 70px 0 50px;}
 .howToUse .howToUse-content {display: flex; flex-wrap: wrap; justify-items: flex-end; margin-top: 24px;}
 .howToUse .howToUse-content li {width: 100%; display: flex; justify-content: flex-end; margin-bottom: 118px;}
 .howToUse .howToUse-content li > div {display: flex; align-items: center;  width: 50%; transform: translateX(-26px);}
@@ -292,8 +299,8 @@ width: 66px;height: 3px; background-color: #12D294;}
     .advantages_content .content-box > div { width: 100%; box-shadow: none; padding: 0; }
     .advantages_content .content-box > div .img-box {display: none;}
     .advantages_content .content-box > div .text-box {width: 100%;}
-    .advantages_content .content-box > div .text-box strong {font-size: 17px; text-align: center;}
-    .advantages_content .content-box > div .text-box p {font-size: 13px; width: auto; text-align: center;}
+    .advantages_content .content-box > div .text-box strong {font-size: 16px; text-align: center;}
+    .advantages_content .content-box > div .text-box p {font-size: 12px; width: auto; text-align: center;}
 
     .howToUse .howToUse-content li > div {transform: translateX(-20px);}
     .howToUse .howToUse-content li:nth-child(2) div{transform: translateX(20px);}
