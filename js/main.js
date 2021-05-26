@@ -11,13 +11,13 @@ $(function(){
             $(this).toggleClass('active');
             if($(this).hasClass('active')){
                 $('.content-pop.left').css('display','block');
-                $('.content-pop.left').animate({opacity: '1'});
-                $('.content_right').animate({opacity: '0'});
+                $('.content-pop.left').animate({opacity: '1'},200);
+                $('.content_right').animate({opacity: '0'},200);
                 $('.download').stop().fadeOut(200);
             } else {
-                $('.content-pop.left').animate({opacity: '0'});
+                $('.content-pop.left').animate({opacity: '0'},200);
                 $('.content-pop.left').css('display','none');
-                $('.content_right').animate({opacity: '1'});
+                $('.content_right').animate({opacity: '1'},200);
                 $('.download').stop().fadeIn(200);
             }
         })
@@ -26,13 +26,13 @@ $(function(){
             $(this).toggleClass('active');
             if($(this).hasClass('active')){
                 $('.content-pop.right').css('display','block');
-                $('.content-pop.right').animate({opacity: '1'});
-                $('.content_left').animate({opacity: '0'});
+                $('.content-pop.right').animate({opacity: '1'},200);
+                $('.content_left').animate({opacity: '0'},200);
                 $('.download').stop().fadeOut(200);
             } else {
-                $('.content-pop.right').animate({opacity: '0'});
+                $('.content-pop.right').animate({opacity: '0'},200);
                 $('.content-pop.right').css('display','none');
-                $('.content_left').animate({opacity: '1'});
+                $('.content_left').animate({opacity: '1'},200);
                 $('.download').stop().fadeIn(200);
             }
         })
