@@ -1,21 +1,31 @@
+/* ---------- FONT ---------- */
+@font-face {
+    font-family: 'SharpGroteskMedium';
+    src: url('../font/SharpGroteskMedium20.otf') format('truetype');
+}
+@font-face {
+    font-family: 'SharpGroteskSmBold';
+    src: url('../font/SharpGroteskSmBold20.otf') format('truetype');
+}
+
 /* ---------- COMMON ---------- */
 html {font-size: 10px;}
 body {font-size: 100%; background-color: rgba(18, 210, 148, .3); font-family: 'Roboto', sans-serif; }
 img {width: 100%; vertical-align: top;}
 a {text-decoration: none;}
 .container {position: relative; width: 1170px; padding: 0 15px; margin: 0 auto; box-sizing: border-box;}
-.cont-tit {font-size: 1.8rem; font-weight: bold; text-align: center;}
+.cont-tit {font-size: 3rem; font-weight: bold; text-align: center;}
 .cont-tit span {position: relative;}
-.cont-tit span::after {content: ""; position: absolute; left: 0; bottom: -3px; height: 2px; width: 100%; background-color: #12D294;}
-.cont-sub-tit {font-size: 1.5rem; text-align: center; margin: 1.6rem 0 1rem; }
-.cont-desc {font-size: 1.2rem; text-align: center; color: #999;}
+.cont-tit span::after {content: ""; position: absolute; left: 0; bottom: -3px; height: 3px; width: 100%; background-color: #12D294;}
+.cont-sub-tit {font-size: 2.4rem; text-align: center; margin: 1.6rem 0 1rem; }
+.cont-desc {font-size: 1.6rem; text-align: center; color: #999;}
 .ml10 {margin-left: 17%;}
 
 /* ---------- MAIn ---------- */
 .main {position: relative; height: 100vh; background-image: url(../images/main_line.png); background-repeat: no-repeat;background-size: 100%;background-position: 0 75%;
 }
 .main .container {height: 100vh;}
-.main .content {position: absolute; bottom: 8%; width: 100%; padding-top: 17.5rem; display: flex; align-items: flex-end; justify-content: space-around;}
+.main .content {position: absolute; bottom: 8%; left: 0; right: 0; padding-top: 17.5rem; display: flex; align-items: flex-end; justify-content: space-around;}
 .content-imgbox.left,
 .content-imgbox.right {position: relative; cursor: pointer;}
 .content-imgbox.left .left-img-01 {width: 41.3rem; padding-top: 3.5rem;}
@@ -74,6 +84,22 @@ width: 66px;height: 3px; background-color: #12D294;}
 
 @media screen and (max-width: 1200px) {
     .container {width: 100%; padding: 0 30px; }
+    .content-imgbox.left .left-img-01 {width: 35rem;}
+    .content-imgbox.right .right-img-01 {width: 30.2rem;}
+    .content-pop .pop-text { top: 45%;}
+}
+@media screen and (max-width: 992px) {
+    .content-imgbox.left .left-img-01 {width: 30rem;}
+    .content-imgbox.right .right-img-01 {width: 25.2rem;}
+    .content-pop .pop-text { top: 45%;}
+    .content-pop .pop-text h3 {font-size: 2.4rem;}
+    .content-pop .pop-text h2 {font-size: 4rem;}
+    .content-pop .pop-text p {font-size: 1.6rem;margin-top: 2rem;}
+    .content-pop .pop-text .more span {font-size: 1.6rem;}
+    .content-pop .pop-text .more img {width: 4.4rem;}
+}
+@media screen and (max-width: 480px) {
+    .container {width: 100%; padding: 0 15px; }
 }
 
 /* ---------- DOWNLOAD ---------- */
@@ -97,9 +123,13 @@ width: 66px;height: 3px; background-color: #12D294;}
 /* @media screen and (max-width: 768px) {
     html {font-size: 6.66px;}
 } */
+@media screen and (max-width: 768px) {
+    #download .content-box h3 {font-size: 3rem;}
+    #download .content-box h2 {font-size: 2.4rem; line-height: 2rem;}
+}
 @media screen and (max-width: 480px) {
-    #download .content-box h3 {font-size: 4rem;}
-    #download .content-box h2 {font-size: 4rem;}
+    #download .content-box h3 {font-size: 2.4rem;}
+    #download .content-box h2 {font-size: 2rem; line-height: 2rem;}
     #download .content-box .link-box > div {display: flex; justify-content: center; flex-wrap: wrap;}
     #download .content-box .btn-wrap {flex-wrap: wrap;}
     #download .content-box .btn-wrap > div {display: flex; justify-content: center; width: 100%; margin-bottom: 2rem;}
@@ -119,8 +149,8 @@ width: 66px;height: 3px; background-color: #12D294;}
 .visual .visual-link p a {display: inline-block; width: 18.2rem; height: 4.2rem; border: 1px solid #ccc; border-radius: 3rem; font-size: 1.5rem; color: #000; line-height: 4.2rem; text-align: center; margin-right: 3rem; background-color: #fff; transition: .4s;}
 .visual .visual-link p a:hover {background-color:#12D294; color: #fff; border-color: transparent;}
  
-.whatWeOffer {padding-top: 70px;}
-.whatWeOffer .offer_content {margin-top: 3rem;}
+.whatWeOffer {padding-top: 100px;}
+.whatWeOffer .offer_content {margin-top: 5rem;}
 .whatWeOffer .offer_content .row {display: flex; margin-bottom: 4rem;}
 .whatWeOffer .offer_content .row:last-child {margin-bottom: 0;}
 .whatWeOffer .offer_content .row .content-item {flex-basis: 25%; max-width: 25%; padding: 0 58px; cursor: pointer;}
@@ -132,7 +162,7 @@ width: 66px;height: 3px; background-color: #12D294;}
 .whatWeOffer .offer_content .row .content-item img {width: 6.6rem; margin-bottom: 2rem;}
 .whatWeOffer .offer_content .row .content-item p {font-size: 1.2rem; color: #12D294;}
 
-.weCanDo {padding: 70px 0 70px; position: relative;}
+.weCanDo {padding: 100px 0 70px; position: relative;}
 .weCanDo .weCanDo-image {position: absolute; left: 0; bottom: 0;}
 .weCanDo .weCanDo-image {width: 65%;}
 .weCanDo .weCanDo-content {display: flex; justify-content: flex-end;  margin-top: 4.3rem}
@@ -164,7 +194,7 @@ width: 66px;height: 3px; background-color: #12D294;}
     .visual .visual-title {top: 10%;}
     .visual .visual-title h2 {font-size: 2rem;}
     .visual .visual-title h3 {font-size: 1.6rem;}
-    .visual .visual-link {top: 65%; left: 0; right: 0; text-align: center;}
+    .visual .visual-link {top: 75%; left: 0; right: 0; text-align: center; transition: all .4s;}
 
     .visual .visual-link em {display: block; width: 100%; text-align: center;}
     .visual .visual-link p {padding: 0 30px;}
@@ -198,23 +228,62 @@ width: 66px;height: 3px; background-color: #12D294;}
 .advantages .advantages_content .img-box {width: 180px; margin: 0 auto; }
 .advantages .advantages_content img {width: 100%;}
 
-.whoCanDoIt {padding-top: 70px;}
+.whoCanDoIt {padding-top: 100px;}
 
-.howToUse {padding: 70px 0;}
+.howToUse {padding: 100px 0 30px;}
 .howToUse .howToUse-content {display: flex; flex-wrap: wrap; justify-items: flex-end; margin-top: 24px;}
 .howToUse .howToUse-content li {width: 100%; display: flex; justify-content: flex-end; margin-bottom: 30px;}
-.howToUse .howToUse-content li > div {display: flex; align-items: center;  width: 50%;}
-.howToUse .howToUse-content li em {display: block; width: 50px; height: 50px; border-radius: 50%; border: 1px solid #12D294; text-align: center; font-size: 30px; line-height: 50px; font-weight: bold;}
+.howToUse .howToUse-content li > div {display: flex; align-items: center;  width: 50%; transform: translateX(-26px);}
+.howToUse .howToUse-content li em {position: relative; display: block; width: 50px; height: 50px; border-radius: 50%; border: 1px solid #12D294; text-align: center; font-size: 30px; line-height: 50px; font-weight: bold; border: 2px solid #12D294; box-sizing: border-box;}
 .howToUse .howToUse-content li span {position: relative; display: block; width: 50px; height: 1px; background-color: #12D294; margin: 0 10px 0 5px;}
-.howToUse .howToUse-content li span::after {content: ""; display: block; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #12D294;}
-.howToUse .howToUse-content li p {}
+.howToUse .howToUse-content li span::after {content: ""; display: block; position: absolute; top: 50%; transform: translateY(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #12D294;}
+.howToUse .howToUse-content li div p {font-size: 1.4rem; order: 1;}
+.howToUse .howToUse-content li:nth-child(2) {justify-content: flex-start;}
+.howToUse .howToUse-content li:nth-child(2) div {justify-content: flex-end; transform: translateX(25px);}
+.howToUse .howToUse-content li:nth-child(2) div em {order: 3; background-color: #12D294; color: #fff;}
+.howToUse .howToUse-content li:nth-child(2) div span {order: 2; margin: 0 5px 0 10px;}
+.howToUse .howToUse-content li:nth-child(2) p {text-align: right;}
+.howToUse .howToUse-content li:nth-child(1) div span::after {right: 0;}
+.howToUse .howToUse-content li:nth-child(2) div span::after {right: 100%;}
+.howToUse .howToUse-content li:nth-child(3) div span::after {right: 0;}
+
+.howToUse .howToUse-content li em::after {content: ""; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); width: 1px; height: 32px; background: #12D294; display: none; }
+.howToUse .howToUse-content li:nth-child(3) em::after {display: none;}
+
+.wellcome { padding-bottom: 70px;}
+.wellcome p { display: flex; width: 100%; justify-content: center; align-items: center; font-size: 38px; font-weight: bold; color: #777; font-family: "SharpGroteskMedium";}
+.wellcome span {font-size: 48px; color: #12d294; font-family: "SharpGroteskSmBold";}
+.wellcome i {display: inline-block; width: 38px; height: 41px; background: url(../images/welcome_ico.png) no-repeat left top; background-size: cover; margin-left: 20px;}
 
 
 
 
+@media screen and (max-width: 768px) {
+    .howToUse .howToUse-content li > div {transform: translateX(-20px);}
+    .howToUse .howToUse-content li:nth-child(2) div{transform: translateX(20px);}
+    .howToUse .howToUse-content li em {width: 40px; height: 40px; line-height: 40px; font-size: 24px;}
+    .howToUse .howToUse-content li div p {font-size: 1.2rem;}
 
+}
 
+@media screen and (max-width: 660px) {
+    .howToUse .howToUse-content li {justify-content: flex-start;}
+    .howToUse .howToUse-content li > div { width: 100%; transform: translateX(0);}
+    .howToUse .howToUse-content li div p {font-size: 1.6rem; }
+    .howToUse .howToUse-content li:nth-child(2) div {justify-content: flex-start;}
+    .howToUse .howToUse-content li:nth-child(2) div {transform: translateX(0)}
+    .howToUse .howToUse-content li:nth-child(2) div em {order: 1;}
+    .howToUse .howToUse-content li:nth-child(2) div span {order: 2; margin: 0 10px 0 5px;}
+    .howToUse .howToUse-content li:nth-child(2) div span::after { right: 0;}
+    .howToUse .howToUse-content li:nth-child(2) div p {order: 3; text-align: left;}
+
+    .howToUse .howToUse-content li div span {display: none;}
+    .howToUse .howToUse-content li em::after {display: block;}
+}
 @media screen and (max-width: 480px) {
-#vutler-visual.visual .visual-image {max-width: 90%;}
+    .whoCanDoIt {padding-top: 0;}
+    .howToUse .howToUse-content li div span {width: 30px;}
+    .howToUse .howToUse-content li div p {font-size: 1.3rem;}
+    
 
 }
