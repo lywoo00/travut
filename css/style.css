@@ -128,8 +128,8 @@ width: 66px;height: 3px; background-color: #12D294;}
 }
 @media screen and (max-width: 480px) {
     .container {width: 100%; padding: 0 15px; }
-    .content-imgbox.left .left-img-01 {width: 60%;}
-    .content-imgbox.right .right-img-01 {width: 60%;} 
+    .content-imgbox.left .left-img-01 {width: 50%;}
+    .content-imgbox.right .right-img-01 {width: 50%;} 
 }
 
 /* ---------- DOWNLOAD ---------- */
