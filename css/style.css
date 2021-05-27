@@ -319,6 +319,7 @@ width: 66px;height: 3px; background-color: #12D294;}
 
     .howToUse .howToUse-content li {margin-bottom: 75px;}
     .howToUse .howToUse-content li em::after {height: 77px; background: #12D294; }
+    .howToUse .howToUse-content li div p {transform: translateY(56px);}
     /* .whoCanDoIt {padding-top: 0;}
     .howToUse .howToUse-content li div span {width: 30px;}
     .howToUse .howToUse-content li div p {font-size: 1.3rem;} */

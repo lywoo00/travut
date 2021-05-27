@@ -1,10 +1,14 @@
 $(function(){
 
-    // $(window).resize( function() {
-    //     if($(window).width() > 768) { 
-    //         mainAnimation();
-    //     }
-    // } );
+    // $(window).resize( function(){
+    //     let windowWidth  = $(window).width;
+    //     if(windowWidth > 768) {
+    //         mainAnimation ();
+    //         } else {
+    //         //창 가로 크기가 500보다 클 경우
+    //         }
+            
+    // });
     mainAnimation ();
     function mainAnimation (){
         $('.content_left').click(function(){
