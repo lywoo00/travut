@@ -1,47 +1,62 @@
 $(function(){
 
-    let isOpenPopUp = false;
-    $('.content_left').click(function(){
-        isOpenPopUp = !isOpenPopUp
-        if (isOpenPopUp) {
-            // $('.content_left').stop().animate({scale:'1.1'},300);
-            $('.content-pop.left').stop().fadeIn(300);
-            $('.etc-img').stop().fadeIn(300);
-            $('.click-me').stop().fadeOut(100);
-            $('.download').stop().fadeOut(100);
-            $('.content_left .arrow-box').stop().animate({opacity: '0'},100);
-            $('.content_right').stop().animate({opacity: '0'},100);
-        } else {
-            // $(this).stop().animate({scale:'1'},300);
-            $('.content-pop.left').stop().fadeOut(300);
-            $('.etc-img').stop().fadeOut(300);
-            $('.click-me').stop().fadeIn(100);
-            $('.download').stop().fadeIn(100);
-            $('.content_left .arrow-box').stop().animate({opacity: '1'},100);
-            $('.content_right').stop().fadeIn(100);
-            $('.content_right').stop().animate({opacity: '1'},100);
-        }
-    })
-    $('.content_right').click(function(){
-        isOpenPopUp = !isOpenPopUp
-        if (isOpenPopUp) {
-            // $(this).stop().animate({transform:'scale(1.1)'});
-            $('.content-pop.right').stop().fadeIn(300);
-            $('.etc-img').stop().fadeIn(300);
-            $('.click-me').stop().fadeOut(100);
-            $('.download').stop().fadeOut(100);
-            $('.arrow-box').stop().animate({opacity: '0'},100);
-            $('.content_left').stop().animate({opacity: '0'},100);
-        } else {
-            // $(this).stop().animate({transform:'scale(1)'});
-            $('.content-pop.right').stop().fadeOut(300);
-            $('.etc-img').stop().fadeOut(300);
-            $('.click-me').stop().fadeIn(100);
-            $('.download').stop().fadeIn(100);
-            $('.arrow-box').stop().animate({opacity: '1'},100);
-            $('.content_left').stop().animate({opacity: '1'},100);
-        }
-    })
+    // $(window).resize( function(){
+    //     let windowWidth  = $(window).width;
+    //     if(windowWidth > 768) {
+    //         mainAnimation ();
+    //         } else {
+    //         //창 가로 크기가 500보다 클 경우
+    //         }
+            
+    // });
+
+    mainAnimation ();
+    function mainAnimation (){
+        $('.content_left').click(function(){
+            $(this).toggleClass('active');
+            $('.content-pop.left').toggleClass('active');
+            if($(this).hasClass('active')){
+                // $('.content-pop.left').addClass('active');
+                // $('.content-pop.left').css('display','block');
+                // $('.content-pop.left').animate({opacity: '1'},200);
+                // $('.content_right').animate({opacity: '0.5'},200);
+                $('.download').stop().fadeOut(200);
+                $('.content_right').removeClass('active');
+                $('.content-pop.right').removeClass('active');
+            } else {
+                // $('.content-pop.left').animate({opacity: '0'},200);
+                // $('.content-pop.left').css('display','none');
+                // $('.content_right').animate({opacity: '1'},200);
+                $('.download').stop().fadeIn(200);
+            }
+            
+        })
+    
+        $('.content_right').click(function(){
+            $(this).toggleClass('active');
+            $('.content-pop.right').toggleClass('active');
+            if($(this).hasClass('active')){
+                // $('.content-pop.right').css('display','block');
+                // $('.content-pop.right').animate({opacity: '1'},200);
+                // $('.content_left').animate({opacity: '0.5'},200);
+                $('.download').stop().fadeOut(200);
+                $('.content_left').removeClass('active');
+                $('.content-pop.left').removeClass('active');
+
+
+
+            } else {
+                // $('.content-pop.right').animate({opacity: '0'},200);
+                // $('.content-pop.right').css('display','none');
+                // $('.content_left').animate({opacity: '1'},200);
+                $('.download').stop().fadeIn(200);
+            }
+        })
+    }
+
+    
+
+    
     
     new WOW().init();
     
