@@ -9,34 +9,46 @@ $(function(){
     //         }
             
     // });
+
     mainAnimation ();
     function mainAnimation (){
         $('.content_left').click(function(){
             $(this).toggleClass('active');
+            $('.content-pop.left').toggleClass('active');
             if($(this).hasClass('active')){
-                $('.content-pop.left').css('display','block');
-                $('.content-pop.left').animate({opacity: '1'},200);
-                $('.content_right').animate({opacity: '0'},200);
+                // $('.content-pop.left').addClass('active');
+                // $('.content-pop.left').css('display','block');
+                // $('.content-pop.left').animate({opacity: '1'},200);
+                // $('.content_right').animate({opacity: '0.5'},200);
                 $('.download').stop().fadeOut(200);
+                $('.content_right').removeClass('active');
+                $('.content-pop.right').removeClass('active');
             } else {
-                $('.content-pop.left').animate({opacity: '0'},200);
-                $('.content-pop.left').css('display','none');
-                $('.content_right').animate({opacity: '1'},200);
+                // $('.content-pop.left').animate({opacity: '0'},200);
+                // $('.content-pop.left').css('display','none');
+                // $('.content_right').animate({opacity: '1'},200);
                 $('.download').stop().fadeIn(200);
             }
+            
         })
     
         $('.content_right').click(function(){
             $(this).toggleClass('active');
+            $('.content-pop.right').toggleClass('active');
             if($(this).hasClass('active')){
-                $('.content-pop.right').css('display','block');
-                $('.content-pop.right').animate({opacity: '1'},200);
-                $('.content_left').animate({opacity: '0'},200);
+                // $('.content-pop.right').css('display','block');
+                // $('.content-pop.right').animate({opacity: '1'},200);
+                // $('.content_left').animate({opacity: '0.5'},200);
                 $('.download').stop().fadeOut(200);
+                $('.content_left').removeClass('active');
+                $('.content-pop.left').removeClass('active');
+
+
+
             } else {
-                $('.content-pop.right').animate({opacity: '0'},200);
-                $('.content-pop.right').css('display','none');
-                $('.content_left').animate({opacity: '1'},200);
+                // $('.content-pop.right').animate({opacity: '0'},200);
+                // $('.content-pop.right').css('display','none');
+                // $('.content_left').animate({opacity: '1'},200);
                 $('.download').stop().fadeIn(200);
             }
         })
